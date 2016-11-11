@@ -1,5 +1,5 @@
 //
-//  QuestionEntity.swift
+//  DiagnosticDataSource.swift
 //  DiagnosticsCore
 //
 //  Created by Harold Hernandez on 11/10/16.
@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-public class Patient: Object {
-    public dynamic var title: String = ""
-    public dynamic var detail: String = ""
+public protocol PatientDataSource {
+    func save(patient: PatientModel)
+    func list() -> Results<PatientModel>
 }

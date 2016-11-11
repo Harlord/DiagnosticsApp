@@ -12,11 +12,11 @@ import RealmSwift
 
 class QuestionsListTableViewController: UITableViewController, QuestionCreateDelegate {
     private var datasource = [SectionItem]()
-    private var diagnosticDataSource: DiagnosticDataSource?
+    private var patientDataSource: PatientDataSource?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.diagnosticDataSource = DiagnosticStore()
+        self.patientDataSource = PatientStore()
         self.tableView.estimatedRowHeight = 44.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
         let section = SectionItem(title: "Diagnoses of patients")
@@ -26,37 +26,30 @@ class QuestionsListTableViewController: UITableViewController, QuestionCreateDel
 
     func refresh() {
         datasource[0].rows.removeAll()
-        diagnosticDataSource?.list().forEach({ (diagnose) in
-            let item = QuestionlistItem(title: diagnose.title, detail: diagnose.detail)
-            datasource[0].rows.append(item)
+        patientDataSource?.list().forEach({ (patient) in
+            datasource[0].rows.append(getItemList(patient: patient))
         })
         tableView.reloadData()
     }
 
-    func newPatient(patient: Patient) {
+    func getItemList(patient: PatientModel) -> QuestionlistItem {
+        return QuestionlistItem(title: patient.name, detail: "\(String(format: "%.0f", patient.likelihood))%")
+    }
 
-        let diagnostic = Diagnostic(patient: patient)
-        let item = QuestionlistItem(
-            title: diagnostic.patient.name,
-            detail: "\(String(format: "%.0f", diagnostic.likelihood))%")
-
-        appendLastRow(item: item)
-
-        persist(item: item)
+    func newPatient(patient: PatientModel) {
+        appendLastRow(item: getItemList(patient: patient))
+        persist(item: patient)
     }
 
     func appendLastRow(item: QuestionlistItem) {
         datasource[0].rows.append(item)
         tableView.beginUpdates()
-        tableView.insertRows(at: [IndexPath(row: datasource[0].rows.count - 1 , section: 0)], with: .automatic)
+        tableView.insertRows(at: [IndexPath(row: datasource[0].rows.count - 1, section: 0)], with: .automatic)
         tableView.endUpdates()
     }
 
-    func persist(item: QuestionlistItem) {
-        let diagnose = Diagnose()
-        diagnose.title = item.title
-        diagnose.detail = item.detail
-        diagnosticDataSource?.save(diagnose: diagnose)
+    func persist(item: PatientModel) {
+        patientDataSource?.save(patient: item)
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

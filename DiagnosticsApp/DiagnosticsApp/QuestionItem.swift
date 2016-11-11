@@ -10,11 +10,9 @@ import UIKit
 import DiagnosticsCore
 
 class QuestionItem: RowItem {
-    var identifierRow = ""
     var answer: Answer
 
-    init(identifier: String, answer: Answer) {
-        self.identifierRow = identifier
+    init(answer: Answer) {
         self.answer = answer
     }
 
@@ -22,12 +20,13 @@ class QuestionItem: RowItem {
         return TitleSwitchTableViewCell.identifierKey
     }
 
-    func prepareCell(cell: UITableViewCell, tableView:UITableView) {
+    func prepareCell(cell: UITableViewCell, tableView: UITableView) {
         let detailCell = cell as! TitleSwitchTableViewCell
         detailCell.titleLabel.text = self.answer.question.prompt
-        detailCell.optionSwitch.isOn = self.answer.answer
+        detailCell.optionSwitch.isOn = self.answer.value
     }
+
     var identifier: String {
-        return self.identifierRow
+        return self.answer.question.identifier
     }
 }

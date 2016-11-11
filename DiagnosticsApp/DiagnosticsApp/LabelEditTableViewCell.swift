@@ -12,7 +12,7 @@ class LabelEditTableViewCell: UITableViewCell {
     static let identifierKey = "label_edit"
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var valueTextField: UITextField!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         valueTextField.clearButtonMode = .never

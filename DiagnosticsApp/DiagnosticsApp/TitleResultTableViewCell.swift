@@ -14,7 +14,7 @@ class TitleResultTableViewCell: UITableViewCell {
     @IBOutlet weak var tagLabel: UILabel!
     @IBOutlet weak var resultlabel: UILabel!
     static let identifierKey = "title_result"
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }

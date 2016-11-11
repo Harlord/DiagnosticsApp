@@ -6,16 +6,18 @@
 //  Copyright © 2016 PagedOrg. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-public struct Question {
+public struct Question: Equatable {
+    public var identifier: String
     public var prompt: String
-    public var description: String
-    public var riskFactorEvaluator: Bool
 
-    public init(prompt: String, description: String, riskFactorEvaluator: Bool) {
+    public init(identifier: String, prompt: String) {
+        self.identifier = identifier
         self.prompt = prompt
-        self.description = description
-        self.riskFactorEvaluator = riskFactorEvaluator
     }
+}
+
+public func ==(lhs: Question, rhs: Question) -> Bool {
+    return lhs.identifier == rhs.identifier
 }

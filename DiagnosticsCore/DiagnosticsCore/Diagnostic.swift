@@ -6,18 +6,15 @@
 //  Copyright © 2016 PagedOrg. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public struct Diagnostic {
-    public var patient: Patient
+    private(set) var matches: [Match]
 
-    public init(patient: Patient) {
-        self.patient = patient
+    public init(matches: [Match], likelihood: Double) {
+        self.matches = matches
+        self.likelihood = likelihood
     }
 
-    public var likelihood: Double {
-        let quantity = Double(patient.answers.count)
-        let matches = Double(patient.answers.filter { $0.match() == $0.question.riskFactorEvaluator }.count)
-        return (matches * 100) / quantity
-    }
+    public private(set) var likelihood: Double
 }

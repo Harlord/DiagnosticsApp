@@ -26,7 +26,7 @@ class NameItem: RowItem {
         return LabelEditTableViewCell.identifierKey
     }
 
-    func prepareCell(cell: UITableViewCell, tableView:UITableView) {
+    func prepareCell(cell: UITableViewCell, tableView: UITableView) {
         let detailCell = cell as! LabelEditTableViewCell
         detailCell.titleLabel.text = self.title
         detailCell.valueTextField.text = self.value

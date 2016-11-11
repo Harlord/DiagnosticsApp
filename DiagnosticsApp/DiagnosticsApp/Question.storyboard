@@ -23,23 +23,23 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="111"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x0x-wU-GXr" id="0Be-jD-bDs">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTE-2j-pQG">
-                                            <rect key="frame" x="16" y="16" width="343" height="41.5"/>
+                                            <rect key="frame" x="16" y="16" width="343" height="42"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0h-7y-w2i">
-                                            <rect key="frame" x="84.5" y="73.5" width="274.5" height="21"/>
+                                            <rect key="frame" x="85" y="74" width="274" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaP-93-2KC">
-                                            <rect key="frame" x="16" y="73.5" width="52.5" height="21"/>
+                                            <rect key="frame" x="16" y="74" width="53" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -92,14 +92,14 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="title_switch" rowHeight="111" id="yCO-Z3-Pai" customClass="TitleSwitchTableViewCell" customModule="DiagnosticsApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="111"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="111"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yCO-Z3-Pai" id="fgv-X0-N3m">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5I-uS-BQo">
-                                            <rect key="frame" x="16" y="16" width="270" height="78.5"/>
+                                            <rect key="frame" x="16" y="16" width="270" height="79"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -123,25 +123,25 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="label_edit" rowHeight="114" id="dDy-RS-YSn" customClass="LabelEditTableViewCell" customModule="DiagnosticsApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="166.5" width="375" height="114"/>
+                                <rect key="frame" x="0.0" y="167" width="375" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dDy-RS-YSn" id="V1q-mo-64K">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="113.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Label&gt;" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8it-m3-P41">
-                                            <rect key="frame" x="18" y="23" width="70" height="67.5"/>
+                                            <rect key="frame" x="18" y="23" width="70" height="68"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="70" id="GnR-OD-eF3"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" red="0.050980392159999999" green="0.38823529410000002" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="&lt;Text&gt;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="X1n-7E-Etg">
-                                            <rect key="frame" x="98" y="23" width="254" height="67.5"/>
+                                            <rect key="frame" x="98" y="23" width="254" height="68"/>
                                             <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>

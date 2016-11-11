@@ -6,8 +6,10 @@
 //  Copyright © 2016 PagedOrg. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public protocol Factor {
-    func match() -> Bool
+    var title: String { get }
+    var questions: Question { get }
+    func maches(answers: [Answer]) -> Bool
 }

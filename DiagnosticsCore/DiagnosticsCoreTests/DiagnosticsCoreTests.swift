@@ -10,61 +10,40 @@ import XCTest
 @testable import DiagnosticsCore
 
 class DiagnosticsCoreTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
+
+    /*!
+     * @brief Check correct likelihood evaulating all answer true == 100%
+     */
+    func testDiagnosticFullLikelihood() {
+        var toddSyndromeDisease = ToddSyndromeDisease()
+
+        var answers = [Answer]()
+        toddSyndromeDisease.factors.map({$0.questions}).map({$0}).forEach { (question) in
+            answers.append(Answer(question: question, value: true))
+        }
+
+        let diagnostic = toddSyndromeDisease.diagnose(answers: answers)
+
+        XCTAssertEqual(diagnostic.likelihood, 100)
     }
 
     /*!
-     * @brief Check correct match evaulating riskFactorEvaluator.
+     * @brief Check correct likelihood evaulating mid answer true and mid in false for 50%.
      */
-    func testMatch() {
-        let question = Question(prompt: "You are a woman?",
-        description: "There are more documented cases of men having it than woman",
-        riskFactorEvaluator: true)
+    func testDiagnosticIncompleteLikelihood() {
 
-        let answerTrue = Answer(question: question, answer: true)
+        var toddSyndromeDisease = ToddSyndromeDisease()
 
-        let answerFalse = Answer(question: question, answer: false)
-
-        if answerTrue.match() == true &&
-            answerFalse.match() == false {
-             XCTAssert(true)
-        } else {
-            XCTAssert(false)
+        var answers = [Answer]()
+        toddSyndromeDisease.factors.map({$0.questions}).map({$0}).forEach { (question) in
+            answers.append(Answer(question: question, value: true))
         }
+
+        answers[0].value = false
+        answers[1].value = false
+
+        let diagnostic = toddSyndromeDisease.diagnose(answers: answers)
+
+        XCTAssertEqual(diagnostic.likelihood, 50)
     }
-
-    /*!
-     * @brief Check correct likelihood evaulating all answer true == 100% and mid answer true and mid in false for 50%.
-     */
-    func testDiagnostic() {
-        let question = Question(prompt: "You are a woman?",
-                                description: "There are more documented cases of men having it than woman",
-                                riskFactorEvaluator: true)
-
-        let answerTrue1 = Answer(question: question, answer: true)
-        let answerTrue2 = Answer(question: question, answer: true)
-
-        let patient1 = Patient(name: "test", answers: [answerTrue1, answerTrue2])
-        let diagnostic1 = Diagnostic(patient: patient1)
-
-        let answerfalse1 = Answer(question: question, answer: false)
-
-        let patient2 = Patient(name: "test", answers: [answerTrue1, answerfalse1])
-        let diagnostic2 = Diagnostic(patient: patient2)
-
-        if diagnostic1.likelihood == 100 &&
-            diagnostic2.likelihood == 50 {
-            XCTAssert(true)
-        } else {
-            XCTAssert(false)
-        }
-    }
-
-    
 }

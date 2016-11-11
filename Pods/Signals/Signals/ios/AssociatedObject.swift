@@ -20,10 +20,10 @@ func getAssociatedObject<T>(_ object: AnyObject, associativeKey: UnsafeRawPointe
     }
 }
 
-func getOrCreateAssociatedObject<T>(_ object: AnyObject, associativeKey: UnsafeRawPointer, defaultValue:T, policy: objc_AssociationPolicy) -> T {
+func getOrCreateAssociatedObject<T>(_ object: AnyObject, associativeKey: UnsafeRawPointer, defaultValue: T, policy: objc_AssociationPolicy) -> T {
     if let valueAsType: T = getAssociatedObject(object, associativeKey: associativeKey) {
         return valueAsType
     }
     setAssociatedObject(object, value: defaultValue, associativeKey: associativeKey, policy: policy)
-    return defaultValue;
+    return defaultValue
 }

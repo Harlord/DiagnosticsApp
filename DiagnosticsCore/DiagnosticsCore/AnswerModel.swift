@@ -1,5 +1,5 @@
 //
-//  QuestionEntity.swift
+//  AnswerModel.swift
 //  DiagnosticsCore
 //
 //  Created by Harold Hernandez on 11/10/16.
@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-public class Patient: Object {
-    public dynamic var title: String = ""
-    public dynamic var detail: String = ""
+public class AnswerModel: Object {
+    public dynamic var question: QuestionModel?
+    public dynamic var value: Bool = false
 }

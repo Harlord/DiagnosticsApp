@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5216F03D1DD55A1B00B498BB /* FullFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216F03C1DD55A1B00B498BB /* FullFactor.swift */; };
+		5216F03F1DD55A3600B498BB /* ToddSyndromeDisease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216F03E1DD55A3600B498BB /* ToddSyndromeDisease.swift */; };
+		5216F0411DD55A6D00B498BB /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216F0401DD55A6D00B498BB /* Match.swift */; };
+		5216F0431DD55A8D00B498BB /* Disease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216F0421DD55A8D00B498BB /* Disease.swift */; };
+		5216F0451DD5719500B498BB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216F0441DD5719500B498BB /* QuestionModel.swift */; };
+		5216F0471DD571AA00B498BB /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216F0461DD571AA00B498BB /* AnswerModel.swift */; };
+		5216F0491DD573E300B498BB /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216F0481DD573E300B498BB /* PatientModel.swift */; };
 		524C64D51DD3ABFA0080E0FE /* DiagnosticsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524C64CB1DD3ABFA0080E0FE /* DiagnosticsCore.framework */; };
 		524C64DA1DD3ABFA0080E0FE /* DiagnosticsCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C64D91DD3ABFA0080E0FE /* DiagnosticsCoreTests.swift */; };
 		524C64DC1DD3ABFA0080E0FE /* DiagnosticsCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 524C64CE1DD3ABFA0080E0FE /* DiagnosticsCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -14,10 +21,10 @@
 		524C64E81DD3ACD10080E0FE /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C64E71DD3ACD10080E0FE /* Answer.swift */; };
 		524C65041DD3F4480080E0FE /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C65031DD3F4480080E0FE /* Diagnostic.swift */; };
 		524C650B1DD40ACD0080E0FE /* Factor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C650A1DD40ACD0080E0FE /* Factor.swift */; };
-		524C650D1DD40F130080E0FE /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C650C1DD40F130080E0FE /* Patient.swift */; };
-		524C650F1DD488DA0080E0FE /* DiagnosticDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C650E1DD488DA0080E0FE /* DiagnosticDataSource.swift */; };
-		524C65111DD4891D0080E0FE /* DiagnosticStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C65101DD4891D0080E0FE /* DiagnosticStore.swift */; };
-		524C65141DD489940080E0FE /* Diagnose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C65131DD489940080E0FE /* Diagnose.swift */; };
+		524C650F1DD488DA0080E0FE /* PatientDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C650E1DD488DA0080E0FE /* PatientDataSource.swift */; };
+		524C65111DD4891D0080E0FE /* PatientStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C65101DD4891D0080E0FE /* PatientStore.swift */; };
+		52AB2C871DD5FACF00DABDF0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AB2C861DD5FACF00DABDF0 /* Pods.framework */; };
+		52AB2C891DD5FAE300DABDF0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AB2C881DD5FAE300DABDF0 /* RealmSwift.framework */; };
 		931A3EDAE8F05C1FC0DBA5E8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F355991ED7D12C5BEAF72E8B /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5216F03C1DD55A1B00B498BB /* FullFactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullFactor.swift; sourceTree = "<group>"; };
+		5216F03E1DD55A3600B498BB /* ToddSyndromeDisease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToddSyndromeDisease.swift; sourceTree = "<group>"; };
+		5216F0401DD55A6D00B498BB /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		5216F0421DD55A8D00B498BB /* Disease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disease.swift; sourceTree = "<group>"; };
+		5216F0441DD5719500B498BB /* QuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		5216F0461DD571AA00B498BB /* AnswerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
+		5216F0481DD573E300B498BB /* PatientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
 		524C64CB1DD3ABFA0080E0FE /* DiagnosticsCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DiagnosticsCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		524C64CE1DD3ABFA0080E0FE /* DiagnosticsCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiagnosticsCore.h; sourceTree = "<group>"; };
 		524C64CF1DD3ABFA0080E0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = DiagnosticsCore/Info.plist; sourceTree = "<group>"; };
@@ -42,10 +56,10 @@
 		524C64E71DD3ACD10080E0FE /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		524C65031DD3F4480080E0FE /* Diagnostic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diagnostic.swift; sourceTree = "<group>"; };
 		524C650A1DD40ACD0080E0FE /* Factor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factor.swift; sourceTree = "<group>"; };
-		524C650C1DD40F130080E0FE /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
-		524C650E1DD488DA0080E0FE /* DiagnosticDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosticDataSource.swift; sourceTree = "<group>"; };
-		524C65101DD4891D0080E0FE /* DiagnosticStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosticStore.swift; sourceTree = "<group>"; };
-		524C65131DD489940080E0FE /* Diagnose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diagnose.swift; sourceTree = "<group>"; };
+		524C650E1DD488DA0080E0FE /* PatientDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDataSource.swift; sourceTree = "<group>"; };
+		524C65101DD4891D0080E0FE /* PatientStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientStore.swift; sourceTree = "<group>"; };
+		52AB2C861DD5FACF00DABDF0 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "../../../../Library/Developer/Xcode/DerivedData/DiagnosticsApp-egwsgybcmflvbmcynqfvlznyhaga/Build/Products/Debug-iphonesimulator/Pods.framework"; sourceTree = "<group>"; };
+		52AB2C881DD5FAE300DABDF0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../../../Library/Developer/Xcode/DerivedData/DiagnosticsApp-egwsgybcmflvbmcynqfvlznyhaga/Build/Products/Debug-iphonesimulator/RealmSwift.framework"; sourceTree = "<group>"; };
 		91315E0B7CA6931D89B99E70 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AB6546BF613F2AAE87A1CA21 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F355991ED7D12C5BEAF72E8B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52AB2C891DD5FAE300DABDF0 /* RealmSwift.framework in Frameworks */,
+				52AB2C871DD5FACF00DABDF0 /* Pods.framework in Frameworks */,
 				524C64D51DD3ABFA0080E0FE /* DiagnosticsCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,7 +117,10 @@
 				524C64E71DD3ACD10080E0FE /* Answer.swift */,
 				524C65031DD3F4480080E0FE /* Diagnostic.swift */,
 				524C650A1DD40ACD0080E0FE /* Factor.swift */,
-				524C650C1DD40F130080E0FE /* Patient.swift */,
+				5216F0421DD55A8D00B498BB /* Disease.swift */,
+				5216F0401DD55A6D00B498BB /* Match.swift */,
+				5216F03E1DD55A3600B498BB /* ToddSyndromeDisease.swift */,
+				5216F03C1DD55A1B00B498BB /* FullFactor.swift */,
 			);
 			path = DiagnosticsCore;
 			sourceTree = "<group>";
@@ -118,9 +137,11 @@
 		524C65121DD489370080E0FE /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				524C650E1DD488DA0080E0FE /* DiagnosticDataSource.swift */,
-				524C65101DD4891D0080E0FE /* DiagnosticStore.swift */,
-				524C65131DD489940080E0FE /* Diagnose.swift */,
+				524C650E1DD488DA0080E0FE /* PatientDataSource.swift */,
+				524C65101DD4891D0080E0FE /* PatientStore.swift */,
+				5216F0441DD5719500B498BB /* QuestionModel.swift */,
+				5216F0461DD571AA00B498BB /* AnswerModel.swift */,
+				5216F0481DD573E300B498BB /* PatientModel.swift */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -137,6 +158,8 @@
 		FE999FEF1B3F7867E720475E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52AB2C881DD5FAE300DABDF0 /* RealmSwift.framework */,
+				52AB2C861DD5FACF00DABDF0 /* Pods.framework */,
 				F355991ED7D12C5BEAF72E8B /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -291,12 +314,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				524C65041DD3F4480080E0FE /* Diagnostic.swift in Sources */,
-				524C65111DD4891D0080E0FE /* DiagnosticStore.swift in Sources */,
-				524C650F1DD488DA0080E0FE /* DiagnosticDataSource.swift in Sources */,
+				5216F0471DD571AA00B498BB /* AnswerModel.swift in Sources */,
+				524C65111DD4891D0080E0FE /* PatientStore.swift in Sources */,
+				5216F0431DD55A8D00B498BB /* Disease.swift in Sources */,
+				5216F0451DD5719500B498BB /* QuestionModel.swift in Sources */,
+				524C650F1DD488DA0080E0FE /* PatientDataSource.swift in Sources */,
+				5216F0411DD55A6D00B498BB /* Match.swift in Sources */,
+				5216F0491DD573E300B498BB /* PatientModel.swift in Sources */,
+				5216F03F1DD55A3600B498BB /* ToddSyndromeDisease.swift in Sources */,
 				524C650B1DD40ACD0080E0FE /* Factor.swift in Sources */,
-				524C65141DD489940080E0FE /* Diagnose.swift in Sources */,
+				5216F03D1DD55A1B00B498BB /* FullFactor.swift in Sources */,
 				524C64E61DD3ACBC0080E0FE /* Question.swift in Sources */,
-				524C650D1DD40F130080E0FE /* Patient.swift in Sources */,
 				524C64E81DD3ACD10080E0FE /* Answer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

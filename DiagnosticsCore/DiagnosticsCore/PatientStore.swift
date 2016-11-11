@@ -9,20 +9,20 @@
 import UIKit
 import RealmSwift
 
-public class DiagnosticStore: DiagnosticDataSource {
+public class PatientStore: PatientDataSource {
     var realm: Realm
 
     public init() {
         self.realm = try! Realm()
     }
 
-    public func save(diagnose: Diagnose) {
+    public func save(patient: PatientModel) {
         try! realm.write {
-            realm.add(diagnose)
+            realm.add(patient)
         }
     }
 
-    public func list() -> Results<Diagnose> {
-        return realm.objects(Diagnose.self)
+    public func list() -> Results<PatientModel> {
+        return realm.objects(PatientModel.self)
     }
 }

@@ -6,19 +6,15 @@
 //  Copyright © 2016 PagedOrg. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-public struct Answer: Factor{
+public class Answer {
     public var question: Question
-    public var answer: Bool
+    public var value: Bool
 
     public init(question: Question,
-        answer: Bool) {
+                value: Bool) {
         self.question = question
-        self.answer = answer
-    }
-
-    public func match() -> Bool {
-        return question.riskFactorEvaluator == answer
+        self.value = value
     }
 }

@@ -11,12 +11,13 @@ import DiagnosticsCore
 import Signals
 
 protocol QuestionCreateDelegate {
-    func newPatient(patient: Patient)
+    func newPatient(patient: PatientModel)
 }
 
 class QuestionCreateTableViewController: UITableViewController {
     private var datasource = [SectionItem]()
     var delegate: QuestionCreateDelegate?
+    var toddSyndromeDisease = ToddSyndromeDisease()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +29,30 @@ class QuestionCreateTableViewController: UITableViewController {
     @IBAction func doneAction(_ sender: Any) {
         self.navigationController?.dismiss(animated: true, completion: nil)
         let name = datasource[0].rows.filter {$0.identifier == "name"}.first as? NameItem
+
         var answers = [Answer]()
+        let patientModel = PatientModel()
+        patientModel.name = name?.value ?? "Patient"
+
         datasource[1].rows.forEach { (item) in
             if let questionItem = item as? QuestionItem {
                 answers.append(questionItem.answer)
+
+                let questionModel = QuestionModel()
+                questionModel.prompt = questionItem.answer.question.prompt
+                questionModel.identifier = questionItem.answer.question.identifier
+
+                let answerModel = AnswerModel()
+                answerModel.question = questionModel
+                answerModel.value = questionItem.answer.value
+
+                patientModel.answers.append(answerModel)
             }
         }
-        self.delegate?.newPatient(patient: Patient(name: name?.value ?? "Patient", answers: answers))
+
+        patientModel.likelihood = toddSyndromeDisease.diagnose(answers: answers).likelihood
+
+        self.delegate?.newPatient(patient: patientModel)
     }
 
     @IBAction func cancelAction(_ sender: Any) {
@@ -44,31 +62,16 @@ class QuestionCreateTableViewController: UITableViewController {
     func refreshList() {
         self.datasource.removeAll()
         var sectionInfo = SectionItem(title: "Basic info")
-        sectionInfo.rows.append(NameItem(identifier: "name",title: "Name:", placeHolder: "Patient Name", value: nil))
+        sectionInfo.rows.append(NameItem(identifier: "name", title: "Name:", placeHolder: "Patient Name", value: nil))
         self.datasource.append(sectionInfo)
 
         var sectionQuestion = SectionItem(title: "Questions for diagnose")
-        sectionQuestion.rows.append(getQuestionItem(identifier: "migrains", prompt: "Do you feel migrains?",
-                                                    description: "Many patients with this disorder also have migraines",
-                                                    riskFactorEvaluator: true))
-        sectionQuestion.rows.append(getQuestionItem(identifier: "age", prompt: "You are under 15 years old?",
-                                                    description: "People 15 years old or younger are more likely to have it",
-                                                    riskFactorEvaluator: true))
-        sectionQuestion.rows.append(getQuestionItem(identifier: "woman", prompt: "You are a woman?",
-                                                    description: "There are more documented cases of men having it than woman",
-                                                    riskFactorEvaluator: true))
-        sectionQuestion.rows.append(getQuestionItem(identifier: "drugs", prompt: "Do you consume hallucinogenic drugs?",
-                                                    description: "Usage of hallucinogenic drugs increases the probability",
-                                                    riskFactorEvaluator: true))
-        self.datasource.append(sectionQuestion)
-    }
 
-    func getQuestionItem(identifier: String, prompt: String, description: String, riskFactorEvaluator: Bool) -> QuestionItem{
-        let question = Question(prompt: prompt,
-                                description: description,
-                                riskFactorEvaluator: riskFactorEvaluator)
-        let answer =  Answer(question: question, answer: false)
-        return QuestionItem(identifier: identifier, answer: answer)
+        toddSyndromeDisease.factors.map({$0.questions}).map({$0}).forEach { (question) in
+            let item = QuestionItem(answer: Answer(question: question, value: false))
+            sectionQuestion.rows.append(item)
+        }
+        self.datasource.append(sectionQuestion)
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -111,12 +114,8 @@ class QuestionCreateTableViewController: UITableViewController {
                 return
             }
             let item = self.datasource[index.section].rows[index.row]
-            switch item.identifier {
-            case "migrains", "age", "woman", "drugs":
-                let questionItem = item as! QuestionItem
-                questionItem.answer.answer = control.optionSwitch.isOn
-            default: break
-            }
+            let questionItem = item as! QuestionItem
+            questionItem.answer.value = control.optionSwitch.isOn
         })
     }
 
@@ -129,12 +128,8 @@ class QuestionCreateTableViewController: UITableViewController {
                 return
             }
             let item = self.datasource[index.section].rows[index.row]
-            switch item.identifier {
-            case "name":
-                let nameItem = item as! NameItem
-                nameItem.value = control.valueTextField.text
-            default: break
-            }
+            let nameItem = item as! NameItem
+            nameItem.value = control.valueTextField.text
         })
     }
 }

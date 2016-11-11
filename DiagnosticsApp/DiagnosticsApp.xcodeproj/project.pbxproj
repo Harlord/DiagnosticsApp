@@ -24,11 +24,12 @@
 		524C64FD1DD3D3110080E0FE /* QuestionlistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C64FC1DD3D3110080E0FE /* QuestionlistItem.swift */; };
 		524C65161DD497D80080E0FE /* LabelEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C65151DD497D80080E0FE /* LabelEditTableViewCell.swift */; };
 		524C65181DD49BE40080E0FE /* NameItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C65171DD49BE40080E0FE /* NameItem.swift */; };
-		526C42751DD527D600C8C253 /* DiagnosticsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526C42731DD5275700C8C253 /* DiagnosticsCore.framework */; };
-		526C42771DD5281200C8C253 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526C42761DD5281200C8C253 /* Pods.framework */; };
 		526C427F1DD5357000C8C253 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526C427D1DD5357000C8C253 /* Pods.framework */; };
 		526C42881DD5359F00C8C253 /* DiagnosticsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526C42871DD5359F00C8C253 /* DiagnosticsCore.framework */; };
 		526C42891DD5359F00C8C253 /* DiagnosticsCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 526C42871DD5359F00C8C253 /* DiagnosticsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52AB2C7F1DD5F42A00DABDF0 /* DiagnosticsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AB2C7D1DD5F42A00DABDF0 /* DiagnosticsCore.framework */; };
+		52AB2C801DD5F42A00DABDF0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AB2C7E1DD5F42A00DABDF0 /* Pods.framework */; };
+		52AB2C851DD5F4B900DABDF0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AB2C841DD5F4B900DABDF0 /* RealmSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 			remoteGlobalIDString = 524C648D1DD3ABE70080E0FE;
 			remoteInfo = DiagnosticsApp;
 		};
-		524C64B01DD3ABE70080E0FE /* PBXContainerItemProxy */ = {
+		52AB2C7B1DD5F3C500DABDF0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 524C64861DD3ABE70080E0FE /* Project object */;
 			proxyType = 1;
@@ -93,6 +94,9 @@
 		526C427C1DD5357000C8C253 /* DiagnosticsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiagnosticsCore.framework; path = "../DiagnosticsCore/build/Release-iphoneos/DiagnosticsCore.framework"; sourceTree = "<group>"; };
 		526C427D1DD5357000C8C253 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "/Users/macbookpro/Dropbox/Batteries911ToddSyndrome/DiagnosticsApp/Pods/../build/Release-iphoneos/Pods.framework"; sourceTree = "<absolute>"; };
 		526C42871DD5359F00C8C253 /* DiagnosticsCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DiagnosticsCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52AB2C7D1DD5F42A00DABDF0 /* DiagnosticsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiagnosticsCore.framework; path = "../../../../Library/Developer/Xcode/DerivedData/DiagnosticsApp-egwsgybcmflvbmcynqfvlznyhaga/Build/Products/Debug-iphonesimulator/DiagnosticsCore.framework"; sourceTree = "<group>"; };
+		52AB2C7E1DD5F42A00DABDF0 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "../../../../Library/Developer/Xcode/DerivedData/DiagnosticsApp-egwsgybcmflvbmcynqfvlznyhaga/Build/Products/Debug-iphonesimulator/Pods.framework"; sourceTree = "<group>"; };
+		52AB2C841DD5F4B900DABDF0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../../../Library/Developer/Xcode/DerivedData/DiagnosticsApp-egwsgybcmflvbmcynqfvlznyhaga/Build/Products/Debug-iphonesimulator/RealmSwift.framework"; sourceTree = "<group>"; };
 		94F30848824052BB78BAC8B2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ADEBE4FB99CDDEB2F8B3E316 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,8 +122,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				526C42771DD5281200C8C253 /* Pods.framework in Frameworks */,
-				526C42751DD527D600C8C253 /* DiagnosticsCore.framework in Frameworks */,
+				52AB2C851DD5F4B900DABDF0 /* RealmSwift.framework in Frameworks */,
+				52AB2C7F1DD5F42A00DABDF0 /* DiagnosticsCore.framework in Frameworks */,
+				52AB2C801DD5F42A00DABDF0 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +200,9 @@
 		524C64FE1DD3D9CB0080E0FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52AB2C841DD5F4B900DABDF0 /* RealmSwift.framework */,
+				52AB2C7D1DD5F42A00DABDF0 /* DiagnosticsCore.framework */,
+				52AB2C7E1DD5F42A00DABDF0 /* Pods.framework */,
 				526C427C1DD5357000C8C253 /* DiagnosticsCore.framework */,
 				526C427D1DD5357000C8C253 /* Pods.framework */,
 				526C42761DD5281200C8C253 /* Pods.framework */,
@@ -297,7 +305,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				524C64B11DD3ABE70080E0FE /* PBXTargetDependency */,
+				52AB2C7C1DD5F3C500DABDF0 /* PBXTargetDependency */,
 			);
 			name = DiagnosticsAppUITests;
 			productName = DiagnosticsAppUITests;
@@ -472,10 +480,10 @@
 			target = 524C648D1DD3ABE70080E0FE /* DiagnosticsApp */;
 			targetProxy = 524C64A51DD3ABE70080E0FE /* PBXContainerItemProxy */;
 		};
-		524C64B11DD3ABE70080E0FE /* PBXTargetDependency */ = {
+		52AB2C7C1DD5F3C500DABDF0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 524C648D1DD3ABE70080E0FE /* DiagnosticsApp */;
-			targetProxy = 524C64B01DD3ABE70080E0FE /* PBXContainerItemProxy */;
+			targetProxy = 52AB2C7B1DD5F3C500DABDF0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

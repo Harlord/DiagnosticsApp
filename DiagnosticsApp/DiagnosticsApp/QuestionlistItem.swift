@@ -22,7 +22,7 @@ class QuestionlistItem: RowItem {
         return TitleResultTableViewCell.identifierKey
     }
 
-    func prepareCell(cell: UITableViewCell, tableView:UITableView) {
+    func prepareCell(cell: UITableViewCell, tableView: UITableView) {
         let detailCell = cell as! TitleResultTableViewCell
         detailCell.tagLabel.text = "Likelihood: "
         detailCell.titleLabel.text = self.title
