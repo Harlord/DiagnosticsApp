@@ -10,6 +10,6 @@ import UIKit
 import RealmSwift
 
 public protocol PatientDataSource {
-    func save(patient: PatientModel)
-    func list() -> Results<PatientModel>
+    func save(patient: Patient)
+    func list() -> [Patient]
 }

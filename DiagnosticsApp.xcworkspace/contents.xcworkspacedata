@@ -10,7 +10,4 @@
    <FileRef
       location = "group:DiagnosticsCore/DiagnosticsCore.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:DiagnosticsApp/DiagnosticsApp.xcodeproj">
-   </FileRef>
 </Workspace>

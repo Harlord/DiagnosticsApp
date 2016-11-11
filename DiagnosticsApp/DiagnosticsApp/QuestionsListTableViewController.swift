@@ -16,7 +16,7 @@ class QuestionsListTableViewController: UITableViewController, QuestionCreateDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.patientDataSource = PatientStore()
+        self.patientDataSource = PatientLocalStore()
         self.tableView.estimatedRowHeight = 44.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
         let section = SectionItem(title: "Diagnoses of patients")
@@ -32,11 +32,11 @@ class QuestionsListTableViewController: UITableViewController, QuestionCreateDel
         tableView.reloadData()
     }
 
-    func getItemList(patient: PatientModel) -> QuestionlistItem {
+    func getItemList(patient: Patient) -> QuestionlistItem {
         return QuestionlistItem(title: patient.name, detail: "\(String(format: "%.0f", patient.likelihood))%")
     }
 
-    func newPatient(patient: PatientModel) {
+    func newPatient(patient: Patient) {
         appendLastRow(item: getItemList(patient: patient))
         persist(item: patient)
     }
@@ -48,7 +48,7 @@ class QuestionsListTableViewController: UITableViewController, QuestionCreateDel
         tableView.endUpdates()
     }
 
-    func persist(item: PatientModel) {
+    func persist(item: Patient) {
         patientDataSource?.save(patient: item)
     }
 

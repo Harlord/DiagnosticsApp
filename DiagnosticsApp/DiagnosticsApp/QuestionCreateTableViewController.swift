@@ -11,7 +11,7 @@ import DiagnosticsCore
 import Signals
 
 protocol QuestionCreateDelegate {
-    func newPatient(patient: PatientModel)
+    func newPatient(patient: Patient)
 }
 
 class QuestionCreateTableViewController: UITableViewController {
@@ -31,28 +31,16 @@ class QuestionCreateTableViewController: UITableViewController {
         let name = datasource[0].rows.filter {$0.identifier == "name"}.first as? NameItem
 
         var answers = [Answer]()
-        let patientModel = PatientModel()
-        patientModel.name = name?.value ?? "Patient"
-
         datasource[1].rows.forEach { (item) in
             if let questionItem = item as? QuestionItem {
                 answers.append(questionItem.answer)
-
-                let questionModel = QuestionModel()
-                questionModel.prompt = questionItem.answer.question.prompt
-                questionModel.identifier = questionItem.answer.question.identifier
-
-                let answerModel = AnswerModel()
-                answerModel.question = questionModel
-                answerModel.value = questionItem.answer.value
-
-                patientModel.answers.append(answerModel)
             }
         }
 
-        patientModel.likelihood = toddSyndromeDisease.diagnose(answers: answers).likelihood
+        let patient = Patient(name: name?.value ?? "Patient",
+                              likelihood: toddSyndromeDisease.diagnose(answers: answers).likelihood)
 
-        self.delegate?.newPatient(patient: patientModel)
+        self.delegate?.newPatient(patient: patient)
     }
 
     @IBAction func cancelAction(_ sender: Any) {

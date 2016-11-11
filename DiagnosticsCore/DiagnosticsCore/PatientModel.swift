@@ -11,6 +11,5 @@ import RealmSwift
 
 public class PatientModel: Object {
     public dynamic var name: String = ""
-    public let answers = List<AnswerModel>()
     public dynamic var likelihood: Double = 0
 }
